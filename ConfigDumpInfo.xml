@@ -35,8 +35,8 @@
 			<Metadata name="Document.РезервированиеТоваров.TabularSection.Товары.Attribute.Номенклатура" id="e4cbac4a-cb55-4735-bb7c-19df2864403f"/>
 			<Metadata name="Document.РезервированиеТоваров.Attribute.Партнер" id="ee43196b-e83a-4e41-bb39-5ba7f3c7dd29"/>
 		</Metadata>
-		<Metadata name="Document.РезервированиеТоваров.Form.ФормаДокумента" id="7032697c-aead-460e-8b29-624523f4f4a7" configVersion="bc0227e6825a5745b115d5c2a59870ae00000000"/>
-		<Metadata name="Document.РезервированиеТоваров.Form.ФормаДокумента.Form" id="7032697c-aead-460e-8b29-624523f4f4a7.0" configVersion="cc287a8804845443a31eaaac190a078f00000000"/>
+		<Metadata name="Document.РезервированиеТоваров.Form.ФормаДокумента" id="7032697c-aead-460e-8b29-624523f4f4a7" configVersion="62796354ebcbdb4f8f5baf01867e328d00000000"/>
+		<Metadata name="Document.РезервированиеТоваров.Form.ФормаДокумента.Form" id="7032697c-aead-460e-8b29-624523f4f4a7.0" configVersion="638a0c6743172942aff30dca4ae6449700000000"/>
 		<Metadata name="Document.УстановкаКвот" id="199e934f-317b-45b3-822e-d9ec9301e1c0" configVersion="2ac71190399d074dab2c566a40f54cd700000000">
 			<Metadata name="Document.УстановкаКвот.Attribute.Партнер" id="56889285-353e-459c-98fa-1e511b8e74dc"/>
 			<Metadata name="Document.УстановкаКвот.Attribute.Квота" id="749edd8f-e6b0-47a5-ac64-96d464950b6f"/>
