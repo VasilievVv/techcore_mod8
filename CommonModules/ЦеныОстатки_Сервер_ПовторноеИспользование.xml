@@ -15,9 +15,9 @@
 			<Server>true</Server>
 			<ExternalConnection>false</ExternalConnection>
 			<ClientOrdinaryApplication>false</ClientOrdinaryApplication>
-			<ServerCall>true</ServerCall>
+			<ServerCall>false</ServerCall>
 			<Privileged>false</Privileged>
-			<ReturnValuesReuse>DuringRequest</ReturnValuesReuse>
+			<ReturnValuesReuse>DuringSession</ReturnValuesReuse>
 		</Properties>
 	</CommonModule>
 </MetaDataObject>

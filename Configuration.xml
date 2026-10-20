@@ -246,6 +246,11 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<CommonModule>ЦеныОстатки_Сервер_ПовторноеИспользование</CommonModule>
+			<CommonModule>РабочийСтолСервер</CommonModule>
+			<CommonForm>РабочийСтолМенеджера</CommonForm>
+			<CommonForm>КвотыНаПределе</CommonForm>
+			<CommonForm>ПозицииДефицита</CommonForm>
+			<CommonForm>РезервированияЗаНеделю</CommonForm>
 			<Catalog>Номенклатура</Catalog>
 			<Catalog>Партнеры</Catalog>
 			<Catalog>Склады</Catalog>
