@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОбновитьВиджеты" id="65">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбновитьВиджеты</CommandName>
+				<ExtendedTooltip name="ФормаОбновитьВиджетыРасширеннаяПодсказка" id="66"/>
+			</Button>
+			<Button name="ФормаСоздатьПриход" id="69">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьПриход</CommandName>
+				<ExtendedTooltip name="ФормаСоздатьПриходРасширеннаяПодсказка" id="70"/>
+			</Button>
+			<Button name="ФормаОткрытьРезервирования" id="67">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьРезервирования</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьРезервированияРасширеннаяПодсказка" id="68"/>
+			</Button>
+			<Button name="ФормаУстановитьКвоту" id="73">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УстановитьКвоту</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьКвотуРасширеннаяПодсказка" id="74"/>
+			</Button>
+			<Button name="ФормаСоздатьРезервирование" id="71">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьРезервирование</CommandName>
+				<ExtendedTooltip name="ФормаСоздатьРезервированиеРасширеннаяПодсказка" id="72"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Виджеты" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджеты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виджеты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ВиджетыРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<UsualGroup name="ВиджетРезерв" id="77">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виджет резерв</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виджет резерв</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВиджетРезервРасширеннаяПодсказка" id="78"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьРезерв" id="79">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Всего зарезервировано, шт</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<ContextMenu name="НадписьРезервКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="НадписьРезервРасширеннаяПодсказка" id="81"/>
+						</LabelDecoration>
+						<LabelField name="ВиджетВсегоЗарезервировано" id="82">
+							<DataPath>ВиджетВсегоЗарезервировано</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=3; ЧН=0</v8:content>
+								</v8:item>
+							</Format>
+							<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ВиджетВсегоЗарезервированоКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ВиджетВсегоЗарезервированоРасширеннаяПодсказка" id="84"/>
+						</LabelField>
+						<LabelDecoration name="СсылкаРезерв" id="85">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Открыть резервирования</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="СсылкаРезервКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="СсылкаРезервРасширеннаяПодсказка" id="87"/>
+							<Events>
+								<Event name="Click">СсылкаРезервНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ВиджетКвоты" id="88">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виджет квоты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виджет резерв</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВиджетКвотыРасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьКвоты" id="90">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Квоты на пределе</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<ContextMenu name="НадписьКвотыКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="НадписьКвотыРасширеннаяПодсказка" id="92"/>
+						</LabelDecoration>
+						<LabelField name="ВиджетКвотыНаПределе" id="93">
+							<DataPath>ВиджетКвотыНаПределе</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=3; ЧН=0</v8:content>
+								</v8:item>
+							</Format>
+							<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ВиджетКвотыНаПределеКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ВиджетКвотыНаПределеРасширеннаяПодсказка" id="95"/>
+						</LabelField>
+						<LabelDecoration name="СсылкаКвоты" id="96">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Какие ?</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="СсылкаКвотыКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="СсылкаКвотыРасширеннаяПодсказка" id="98"/>
+							<Events>
+								<Event name="Click">СсылкаКвотыНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ВиджетДефицит" id="99">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виджет дефицит</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виджет резерв</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВиджетДефицитРасширеннаяПодсказка" id="100"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьДефицита" id="101">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Позиции дефицита</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<ContextMenu name="НадписьДефицитаКонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="НадписьДефицитаРасширеннаяПодсказка" id="103"/>
+						</LabelDecoration>
+						<LabelField name="ВиджетПозицииДефицита" id="104">
+							<DataPath>ВиджетПозицииДефицита</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=3; ЧН=0</v8:content>
+								</v8:item>
+							</Format>
+							<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ВиджетПозицииДефицитаКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="ВиджетПозицииДефицитаРасширеннаяПодсказка" id="106"/>
+						</LabelField>
+						<LabelDecoration name="СсылкаДефицит" id="107">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Какие ?</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="СсылкаДефицитКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="СсылкаДефицитРасширеннаяПодсказка" id="109"/>
+							<Events>
+								<Event name="Click">СсылкаДефицитНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ВиджетНеделя" id="110">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виджет резерв</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВиджетНеделяРасширеннаяПодсказка" id="111"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьНедели" id="112">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Резервов за неделю</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<ContextMenu name="НадписьНеделиКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="НадписьНеделиРасширеннаяПодсказка" id="114"/>
+						</LabelDecoration>
+						<LabelField name="ВиджетРезервовЗаНеделю" id="115">
+							<DataPath>ВиджетРезервовЗаНеделю</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=3; ЧН=0</v8:content>
+								</v8:item>
+							</Format>
+							<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ВиджетРезервовЗаНеделюКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ВиджетРезервовЗаНеделюРасширеннаяПодсказка" id="117"/>
+						</LabelField>
+						<LabelDecoration name="СсылкаНеделя" id="118">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Открыть</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="СсылкаНеделяКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="СсылкаНеделяРасширеннаяПодсказка" id="120"/>
+							<Events>
+								<Event name="Click">СсылкаНеделяНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Обновление" id="121">
+			<Visible>false</Visible>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновление показателей…</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОбновлениеКонтекстноеМеню" id="122"/>
+			<ExtendedTooltip name="ОбновлениеРасширеннаяПодсказка" id="123"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВиджетВсегоЗарезервировано" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего зарезервировано</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВиджетРезервовЗаНеделю" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резервов за неделю</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВиджетКвотыНаПределе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Квоты на пределе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВиджетПозицииДефицита" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позиции дефицита</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВиджетКвотыНаПределе</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВиджетКвотыНаПределе</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВиджетКвотыНаПределе</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВиджетКвотыНаПределе</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВиджетПозицииДефицита</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВиджетПозицииДефицита</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВиджетПозицииДефицита</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВиджетПозицииДефицита</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#99CC00</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьРезервирование" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать резервирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать резервирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьРезервирование</Action>
+		</Command>
+		<Command name="СоздатьПриход" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать приход</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать приход</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьПриход</Action>
+		</Command>
+		<Command name="УстановитьКвоту" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить квоту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить квоту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьКвоту</Action>
+		</Command>
+		<Command name="ОткрытьРезервирования" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть резервирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть резервирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРезервирования</Action>
+		</Command>
+		<Command name="ОбновитьВиджеты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить виджеты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить виджеты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьВиджеты</Action>
+		</Command>
+	</Commands>
+</Form>
